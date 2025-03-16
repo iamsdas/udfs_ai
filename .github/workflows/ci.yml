@@ -1,0 +1,27 @@
+name: Github Workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  run-python-cli:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install fused
+
+    - name: Run Python CLI command
+      run: |
+        python -c "import fused; fused.run("sync_agents_json")"

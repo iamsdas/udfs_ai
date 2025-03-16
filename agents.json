@@ -1,0 +1,10 @@
+{
+    "agents": [
+        {
+            "name": "a",
+            "udfs": [
+                "https://github.com/fusedio/udfs/tree/main/public/AirBnb_Listings"
+            ]
+        }
+    ]
+}
