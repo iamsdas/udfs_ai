@@ -1,9 +1,9 @@
 {
     "agents": [
         {
-            "name": "a",
+            "name": "agent1",
             "udfs": [
-                "https://github.com/fusedio/udfs/tree/main/public/AirBnb_Listings"
+                "Power_Plants_H3"
             ]
         }
     ]
