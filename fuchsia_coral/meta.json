@@ -12,6 +12,17 @@
           "entrypoint": "udf",
           "parameters": {},
           "metadata": {
+            "fused:name": "fuchsia_coral",
+            "fused:slug": "fuchsia_coral",
+            "fused:gitRepo": "iamsdas/udfs_ai",
+            "fused:gitRef": "1e307662e9c42e251b0542eb8b5b999a35c37365",
+            "fused:gitUrl": "https://github.com/iamsdas/udfs_ai/tree/1e307662e9c42e251b0542eb8b5b999a35c37365/fuchsia_coral/",
+            "fused:gitShortUrl": "https://github.com/iamsdas/udfs_ai/tree/1e30766/fuchsia_coral/",
+            "fused:gitPath": "fuchsia_coral",
+            "fused:gitLastModified": "2025-04-17T11:20:14.739Z",
+            "fused:gitPullRequestBranch": "iamsdas-patch-e122bf-test",
+            "fused:gitPullRequestLink": "https://github.com/iamsdas/udfs_ai/pull/1",
+            "fused:assetUrl": "fused_uploaded_preview",
             "fused:vizConfig": {
               "tileLayer": {
                 "@@type": "TileLayer",
@@ -54,8 +65,6 @@
               }
             },
             "fused:udfType": "auto",
-            "fused:slug": "fuchsia_coral",
-            "fused:name": "fuchsia_coral",
             "fused:id": null
           },
           "source": "fuchsia_coral.py",
