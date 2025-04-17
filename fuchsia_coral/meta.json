@@ -1,0 +1,77 @@
+{
+  "version": "0.0.3",
+  "job_config": {
+    "version": "0.0.3",
+    "name": null,
+    "steps": [
+      {
+        "type": "udf",
+        "udf": {
+          "type": "geopandas_v2",
+          "name": "fuchsia_coral",
+          "entrypoint": "udf",
+          "parameters": {},
+          "metadata": {
+            "fused:name": "fuchsia_coral",
+            "fused:slug": "fuchsia_coral",
+            "fused:gitRepo": "iamsdas/udfs_ai",
+            "fused:gitRef": "1e307662e9c42e251b0542eb8b5b999a35c37365",
+            "fused:gitUrl": "https://github.com/iamsdas/udfs_ai/tree/1e307662e9c42e251b0542eb8b5b999a35c37365/fuchsia_coral/",
+            "fused:gitShortUrl": "https://github.com/iamsdas/udfs_ai/tree/1e30766/fuchsia_coral/",
+            "fused:gitPath": "fuchsia_coral",
+            "fused:gitLastModified": "2025-04-17T11:20:14.739Z",
+            "fused:gitPullRequestBranch": "iamsdas-patch-e122bf-test",
+            "fused:gitPullRequestLink": "https://github.com/iamsdas/udfs_ai/pull/1",
+            "fused:assetUrl": "fused_uploaded_preview",
+            "fused:vizConfig": {
+              "tileLayer": {
+                "@@type": "TileLayer",
+                "minZoom": 0,
+                "maxZoom": 19,
+                "tileSize": 256
+              },
+              "rasterLayer": {
+                "@@type": "BitmapLayer",
+                "pickable": true
+              },
+              "vectorLayer": {
+                "@@type": "GeoJsonLayer",
+                "stroked": true,
+                "filled": false,
+                "pickable": true,
+                "lineWidthMinPixels": 1,
+                "pointRadiusMinPixels": 1,
+                "getLineColor": {
+                  "@@function": "colorContinuous",
+                  "attr": "value",
+                  "domain": [
+                    0,
+                    10
+                  ],
+                  "steps": 20,
+                  "colors": "RedOr",
+                  "nullColor": [
+                    184,
+                    184,
+                    184
+                  ]
+                },
+                "getFillColor": [
+                  208,
+                  208,
+                  208,
+                  40
+                ]
+              }
+            },
+            "fused:udfType": "auto",
+            "fused:id": null
+          },
+          "source": "fuchsia_coral.py",
+          "headers": []
+        }
+      }
+    ],
+    "metadata": null
+  }
+}
