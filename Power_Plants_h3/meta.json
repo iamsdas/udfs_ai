@@ -59,6 +59,7 @@
             "fused:slug": "Power_Plants_H3",
             "fused:name": "Power_Plants_H3",
             "fused:id": null,
+            "fused:assetUrl": "fused_uploaded_preview",
             "fused:tags": [
               {
                 "id": "vector",
@@ -66,22 +67,18 @@
               },
               {
                 "id": "h3",
-                "label": "h3",
-                "isCreatable": true
+                "label": "h3"
               },
               {
                 "id": "duckdb",
-                "label": "duckdb",
-                "isCreatable": true
+                "label": "duckdb"
               },
               {
                 "id": "energy",
-                "label": "energy",
-                "isCreatable": true
+                "label": "energy"
               }
             ],
-            "fused:description": "## Overview\n\nAggregate data from the Global Power Plant Database using dynamic H3 levels based on zoom.\n\nI recommend using a light base map for this. You can change the opacity in the Visualize tab.\n\n\n## External links\n\n- [Data Source: A Global Database of Power Plants](https://www.wri.org/research/global-database-power-plants",
-            "fused:assetUrl": "https://fused-magic.s3.us-west-2.amazonaws.com/thumbnails/udfs-staging/powerplant.png"
+            "fused:description": "## Overview\n\nAggregate data from the Global Power Plant Database using dynamic H3 levels based on zoom.\n\nI recommend using a light base map for this. You can change the opacity in the Visualize tab.\n\n\n## External links\n\n- [Data Source: A Global Database of Power Plants](https://www.wri.org/research/global-database-power-plants\n"
           },
           "source": "Power_Plants_H3.py",
           "headers": [
