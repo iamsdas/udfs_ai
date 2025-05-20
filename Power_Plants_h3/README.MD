@@ -1,5 +1,5 @@
 <!--fused:preview-->
-<p align="center"><img src="https://fused-magic.s3.amazonaws.com/thumbnails/preview/iamsdas/udfs_ai/Power_Plants_H3" width="600" alt="UDF preview image"></p>
+<p align="center"><img src="https://fused-magic.s3.amazonaws.com/thumbnails/preview/iamsdas/udfs_ai/Power_Plants_H3/1bf43a13-b79c-402b-9569-7da52921bbe2" width="600" alt="UDF preview image"></p>
 
 <!--fused:tags-->
 Tags: `vector` `h3` `duckdb` `energy`
