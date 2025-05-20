@@ -78,7 +78,7 @@
               }
             ],
             "fused:description": "## Overview\n\nAggregate data from the Global Power Plant Database using dynamic H3 levels based on zoom.\n\nI recommend using a light base map for this. You can change the opacity in the Visualize tab.\n\n\n## External links\n\n- [Data Source: A Global Database of Power Plants](https://www.wri.org/research/global-database-power-plants\n",
-            "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/preview/iamsdas/udfs_ai/Power_Plants_H3"
+            "fused:assetUrl": "https://fused-magic.s3.amazonaws.com/thumbnails/preview/iamsdas/udfs_ai/Power_Plants_H3/7595c6ce-485b-4732-970d-aafae8ae63f8"
           },
           "source": "Power_Plants_H3.py",
           "headers": [
