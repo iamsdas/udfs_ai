@@ -1,6 +1,7 @@
 def run_query(bounds, pplant_table, resolution):
         xmin, ymin, xmax, ymax = bounds
         # Here we make cells ake cells and see top power plant fuel type for each cell
+    
         query = f"""    
         WITH h3_cte AS (
             SELECT
