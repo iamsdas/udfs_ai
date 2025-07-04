@@ -12,6 +12,8 @@
           "entrypoint": "udf",
           "parameters": {},
           "metadata": {
+            "fused:name": "aquamarine_lemming",
+            "fused:slug": "aquamarine_lemming",
             "fused:vizConfig": {
               "tileLayer": {
                 "@@type": "TileLayer",
@@ -53,9 +55,7 @@
                 ]
               }
             },
-            "fused:udfType": "auto",
-            "fused:slug": "aquamarine_lemming",
-            "fused:name": "aquamarine_lemming"
+            "fused:udfType": "auto"
           },
           "source": "aquamarine_lemming.py",
           "headers": []
