@@ -1,0 +1,1 @@
+This UDF returns Overture Maps building footprints for a given `bounds` viewport

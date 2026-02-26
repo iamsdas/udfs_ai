@@ -1,0 +1,1 @@
+<p style="font-size: 32px; text-align: left;">3 - <span style="font-size: 32px;">Caching saves you redundant compute</span></p>
