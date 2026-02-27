@@ -1,1 +1,0 @@
-Every UDF can be [called as an API](https://docs.fused.io/guide/working-with-udfs/run-udfs-as-api)

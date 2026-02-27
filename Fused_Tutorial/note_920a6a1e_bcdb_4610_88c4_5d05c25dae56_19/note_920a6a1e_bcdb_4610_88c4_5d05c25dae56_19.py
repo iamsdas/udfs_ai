@@ -1,1 +1,0 @@
-Click on "Map" view in the toggle above the canvas

@@ -1,1 +1,0 @@
-<p style="text-align: left;"><code>udf.map()</code> allows you to call a UDF with hundreds of workers in parallel!</p>

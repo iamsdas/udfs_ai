@@ -1,1 +1,0 @@
-<p style="font-size: 32px; text-align: left;">2 - <span style="font-size: 32px;">Call it in parallel!</span></p>

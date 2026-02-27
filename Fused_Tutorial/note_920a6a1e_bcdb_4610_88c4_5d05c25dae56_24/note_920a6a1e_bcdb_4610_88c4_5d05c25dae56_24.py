@@ -1,1 +1,0 @@
-<p style="text-align: left;">Call the same UDF in parallel again, no problem!<br>By default calls are cached, so you don't waste compute</p>

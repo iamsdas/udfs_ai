@@ -1,1 +1,0 @@
-<h1 style="font-size: 48px; text-align: left;">D - Scale &amp; Parallelise your work</h1>

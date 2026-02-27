@@ -1,1 +1,0 @@
-<p style="font-size: 32px; text-align: left;">1 - <span style="font-size: 32px;">Write a UDF that processes data</span></p>

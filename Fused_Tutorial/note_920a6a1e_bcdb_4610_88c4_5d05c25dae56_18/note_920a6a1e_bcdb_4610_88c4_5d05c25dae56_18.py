@@ -1,1 +1,0 @@
-# 2 - Or change to "Map" view
