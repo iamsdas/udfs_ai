@@ -8,13 +8,15 @@
         "type": "udf",
         "udf": {
           "type": "geopandas_v2",
-          "name": "udf_1",
+          "name": "Widget_2",
           "entrypoint": "udf",
           "parameters": {},
           "metadata": {
-            "fused:name": "udf_1",
-            "fused:slug": "udf_1",
-            "fused:hasDefaultName": true,
+            "isNodeTemplate": true,
+            "nodeTemplateType": "json_ui",
+            "nodeTemplateColor": "#FFF9C4",
+            "nodeTemplateGradient": true,
+            "stickyNoteVersion": 3,
             "fused:vizConfig": {
               "tileLayer": {
                 "@@type": "TileLayer",
@@ -41,7 +43,7 @@
                     10
                   ],
                   "steps": 20,
-                  "colors": "RedOr",
+                  "colors": "PurpOr",
                   "nullColor": [
                     184,
                     184,
@@ -56,9 +58,11 @@
                 ]
               }
             },
-            "fused:udfType": "auto"
+            "fused:udfType": "auto",
+            "fused:slug": "Widget_2",
+            "fused:name": "Widget_2"
           },
-          "source": "udf_1.py",
+          "source": "Widget_2.py",
           "headers": []
         }
       }
