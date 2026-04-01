@@ -57,7 +57,7 @@
             },
             "fused:udfType": "auto"
           },
-          "source": "test_2.py",
+          "code": "@fused.udf\ndef udf(name: str = \"world\"):\n    import pandas as pd\n\n    return pd.DataFrame({\"hello\": [name]})\n",
           "headers": []
         }
       }
