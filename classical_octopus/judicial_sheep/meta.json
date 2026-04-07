@@ -1,0 +1,68 @@
+{
+  "version": "0.0.3",
+  "job_config": {
+    "version": "0.0.3",
+    "name": null,
+    "steps": [
+      {
+        "type": "udf",
+        "udf": {
+          "type": "geopandas_v2",
+          "name": "judicial_sheep",
+          "entrypoint": "udf",
+          "parameters": {},
+          "metadata": {
+            "fused:name": "judicial_sheep",
+            "fused:slug": "judicial_sheep",
+            "fused:hasDefaultName": true,
+            "fused:vizConfig": {
+              "tileLayer": {
+                "@@type": "TileLayer",
+                "minZoom": 0,
+                "maxZoom": 19,
+                "tileSize": 256
+              },
+              "rasterLayer": {
+                "@@type": "BitmapLayer",
+                "pickable": true
+              },
+              "vectorLayer": {
+                "@@type": "GeoJsonLayer",
+                "stroked": true,
+                "filled": false,
+                "pickable": true,
+                "lineWidthMinPixels": 1,
+                "pointRadiusMinPixels": 1,
+                "getLineColor": {
+                  "@@function": "colorContinuous",
+                  "attr": "value",
+                  "domain": [
+                    0,
+                    10
+                  ],
+                  "steps": 20,
+                  "colors": "Peach",
+                  "nullColor": [
+                    184,
+                    184,
+                    184
+                  ]
+                },
+                "getFillColor": [
+                  208,
+                  208,
+                  208,
+                  40
+                ]
+              }
+            },
+            "fused:udfType": "auto"
+          },
+          "code": "@fused.udf(cache_max_age=0)\ndef udf(as_arrow:bool=False):\n    import pandas as pd\n    df=pd.DataFrame({\"col\": [{100,200,300}]})\n    if not as_arrow:\n        return df\n    else:   \n        import pyarrow as pa\n        table = pa.Table.from_pandas(df)\n        return table\n        ",
+          "headers": []
+        }
+      }
+    ],
+    "metadata": null
+  }
+}
