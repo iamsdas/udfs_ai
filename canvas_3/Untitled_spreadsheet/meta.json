@@ -8,12 +8,12 @@
         "type": "udf",
         "udf": {
           "type": "geopandas_v2",
-          "name": "test_2",
+          "name": "Untitled_spreadsheet",
           "entrypoint": "udf",
           "parameters": {},
           "metadata": {
-            "fused:name": "test_2",
-            "fused:slug": "test_2",
+            "fused:name": "Untitled_spreadsheet",
+            "fused:slug": "Untitled_spreadsheet",
             "fused:vizConfig": {
               "tileLayer": {
                 "@@type": "TileLayer",
@@ -40,7 +40,7 @@
                     10
                   ],
                   "steps": 20,
-                  "colors": "RedOr",
+                  "colors": "DarkMint",
                   "nullColor": [
                     184,
                     184,
@@ -57,8 +57,8 @@
             },
             "fused:udfType": "auto"
           },
-          "code": "@fused.udf\ndef udf(name: str = \"world\"):\n    import pandas as pd\n\n    return pd.DataFrame({\"hello\": [name]})\n",
-          "headers": []
+          "headers": [],
+          "source": "Untitled_spreadsheet.py"
         }
       }
     ],
