@@ -1,0 +1,31 @@
+{
+  "version": "0.0.3",
+  "job_config": {
+    "version": "0.0.3",
+    "name": null,
+    "steps": [
+      {
+        "type": "udf",
+        "udf": {
+          "type": "geopandas_v2",
+          "name": "widget_7",
+          "entrypoint": "udf",
+          "parameters": {},
+          "metadata": {
+            "isNodeTemplate": true,
+            "nodeTemplateType": "json_ui",
+            "nodeTemplateColor": "#2D2D2D",
+            "stickyNoteVersion": 4,
+            "nodeTemplateGradient": false,
+            "fused:udfType": "auto",
+            "fused:slug": "widget_7",
+            "fused:name": "widget_7"
+          },
+          "headers": [],
+          "source": "widget_7.py"
+        }
+      }
+    ],
+    "metadata": null
+  }
+}
