@@ -1,0 +1,31 @@
+{
+  "version": "0.0.3",
+  "job_config": {
+    "version": "0.0.3",
+    "name": null,
+    "steps": [
+      {
+        "type": "udf",
+        "udf": {
+          "type": "geopandas_v2",
+          "name": "html_2",
+          "entrypoint": "udf",
+          "parameters": {},
+          "metadata": {
+            "isNodeTemplate": true,
+            "nodeTemplateType": "html_template_node",
+            "nodeTemplateColor": "#FFF9C4",
+            "nodeTemplateGradient": true,
+            "stickyNoteVersion": 4,
+            "fused:udfType": "auto",
+            "fused:slug": "html_2",
+            "fused:name": "html_2"
+          },
+          "headers": [],
+          "source": "html_2.py"
+        }
+      }
+    ],
+    "metadata": null
+  }
+}
