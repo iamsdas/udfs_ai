@@ -12,60 +12,19 @@
           "entrypoint": "udf",
           "parameters": {},
           "metadata": {
-            "isNodeTemplate": true,
-            "nodeTemplateType": "textbox",
-            "nodeTemplateColor": "#FFF9C4",
-            "nodeTemplateGradient": true,
-            "stickyNoteVersion": 3,
-            "fused:vizConfig": {
-              "tileLayer": {
-                "@@type": "TileLayer",
-                "minZoom": 0,
-                "maxZoom": 19,
-                "tileSize": 256
-              },
-              "rasterLayer": {
-                "@@type": "BitmapLayer",
-                "pickable": true
-              },
-              "vectorLayer": {
-                "@@type": "GeoJsonLayer",
-                "stroked": true,
-                "filled": false,
-                "pickable": true,
-                "lineWidthMinPixels": 1,
-                "pointRadiusMinPixels": 1,
-                "getLineColor": {
-                  "@@function": "colorContinuous",
-                  "attr": "value",
-                  "domain": [
-                    0,
-                    10
-                  ],
-                  "steps": 20,
-                  "colors": "RedOr",
-                  "nullColor": [
-                    184,
-                    184,
-                    184
-                  ]
-                },
-                "getFillColor": [
-                  208,
-                  208,
-                  208,
-                  40
-                ]
-              }
-            },
-            "fused:udfType": "auto",
+            "fused:name": "note_1",
             "fused:slug": "note_1",
-            "fused:name": "note_1"
+            "fused:udfType": "auto",
+            "nodeTemplateType": "textbox",
+            "isNodeTemplate": true,
+            "nodeTemplateColor": "#FFA767",
+            "nodeTemplateGradient": true,
+            "nodeTemplateScaleFactor": 3,
+            "nodeTemplateAlignment": "left",
+            "fused:title": "note_1"
           },
-          "collection_id": "eb5bc465-bcc5-42fe-8355-b5ee19eaecc8",
-          "collection_name": "canvas_3",
-          "code": "# ",
-          "headers": []
+          "headers": [],
+          "source": "note_1.py"
         }
       }
     ],
