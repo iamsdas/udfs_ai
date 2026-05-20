@@ -8,17 +8,22 @@
         "type": "udf",
         "udf": {
           "type": "geopandas_v2",
-          "name": "udf_1",
+          "name": "widget_1",
           "entrypoint": "udf",
           "parameters": {},
           "metadata": {
-            "fused:name": "udf_1",
-            "fused:slug": "udf_1",
+            "fused:name": "widget_1",
+            "fused:slug": "widget_1",
             "fused:udfType": "auto",
-            "fused:title": "updated title"
+            "nodeTemplateType": "json_ui",
+            "isNodeTemplate": true,
+            "fused:title": "widget_1",
+            "nodeTemplateColor": "#2e2e2e",
+            "nodeTemplateGradient": false,
+            "stickyNoteVersion": 4
           },
           "headers": [],
-          "source": "udf_1.py"
+          "source": "widget_1.py"
         }
       }
     ],
