@@ -1,0 +1,20 @@
+type = "canvas"
+version = 2
+
+[canvas]
+edges = []
+
+[[canvas.nodes]]
+udfName = "udf_1"
+x = 27.5
+y = 395
+zIndex = 100
+width = 700
+height = 500
+title = "udf_1"
+visible = true
+
+[canvas.viewport]
+x = 0
+y = 0
+zoom = 1
