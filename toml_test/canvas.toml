@@ -2,19 +2,73 @@ type = "canvas"
 version = 2
 
 [canvas]
+comments = []
 edges = []
 
 [[canvas.nodes]]
+udfName = "Folder_1"
+x = -888.8729738265376
+y = 355
+zIndex = 1
+width = 1656
+height = 1190
+type = "udf-folder"
+title = "Folder_1"
+folderName = "Folder_1"
+folderColor = "#9370DB40"
+childUdfOrder = ["html_1", "widget_1", "udf_1"]
+
+[[canvas.nodes]]
 udfName = "udf_1"
-x = 27.5
-y = 395
+x = 40
+y = 650
 zIndex = 100
 width = 700
 height = 500
 title = "udf_1"
 visible = true
 
+[[canvas.nodes]]
+udfName = "widget_1"
+x = 815
+y = 75
+zIndex = 101
+width = 700
+height = 500
+title = "widget_1"
+visible = true
+
+[[canvas.nodes]]
+udfName = "html_1"
+x = 40
+y = 75
+zIndex = 102
+width = 700
+height = 500
+title = "html_1"
+visible = true
+
+[[canvas.nodes]]
+udfName = "note_1"
+x = -1195.2073902751613
+y = -175
+zIndex = 103
+width = 350
+height = 250
+title = "note_1"
+visible = true
+textBoxColor = "#FFA767"
+textBoxGradient = true
+textBoxScaleFactor = 1
+textBoxAlignment = "left"
+
 [canvas.viewport]
-x = 0
-y = 0
-zoom = 1
+x = 725.2010197958504
+y = 256.57225619362475
+zoom = 0.3775712893943625
+
+[canvas.viewportBounds]
+minX = -1920.6995875112698
+minY = -679.5332786165377
+maxX = 1266.7779400583074
+maxY = 2737.0400579557554
