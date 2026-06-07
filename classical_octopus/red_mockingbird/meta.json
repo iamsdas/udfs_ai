@@ -1,0 +1,68 @@
+{
+  "version": "0.0.3",
+  "job_config": {
+    "version": "0.0.3",
+    "name": null,
+    "steps": [
+      {
+        "type": "udf",
+        "udf": {
+          "type": "geopandas_v2",
+          "name": "red_mockingbird",
+          "entrypoint": "udf",
+          "parameters": {},
+          "metadata": {
+            "fused:name": "red_mockingbird",
+            "fused:slug": "red_mockingbird",
+            "fused:hasDefaultName": true,
+            "fused:vizConfig": {
+              "tileLayer": {
+                "@@type": "TileLayer",
+                "minZoom": 0,
+                "maxZoom": 19,
+                "tileSize": 256
+              },
+              "rasterLayer": {
+                "@@type": "BitmapLayer",
+                "pickable": true
+              },
+              "vectorLayer": {
+                "@@type": "GeoJsonLayer",
+                "stroked": true,
+                "filled": false,
+                "pickable": true,
+                "lineWidthMinPixels": 1,
+                "pointRadiusMinPixels": 1,
+                "getLineColor": {
+                  "@@function": "colorContinuous",
+                  "attr": "value",
+                  "domain": [
+                    0,
+                    10
+                  ],
+                  "steps": 20,
+                  "colors": "BluGrn",
+                  "nullColor": [
+                    184,
+                    184,
+                    184
+                  ]
+                },
+                "getFillColor": [
+                  208,
+                  208,
+                  208,
+                  40
+                ]
+              }
+            },
+            "fused:udfType": "auto"
+          },
+          "code": "@fused.udf()\ndef udf(name: str = \"world\"):\n    udf_ = fused.load(\"judicial_sheep\")\n\n    print('as_arrow=False:', fused.run(udf_, as_arrow=False)['col'].iloc[0][0])\n    print('as_arrow=True:', udf_(as_arrow=True)['col'].iloc[0][0])\n    ",
+          "headers": []
+        }
+      }
+    ],
+    "metadata": null
+  }
+}

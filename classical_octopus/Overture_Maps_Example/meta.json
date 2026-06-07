@@ -1,0 +1,135 @@
+{
+  "version": "0.0.3",
+  "job_config": {
+    "version": "0.0.3",
+    "name": null,
+    "steps": [
+      {
+        "type": "udf",
+        "udf": {
+          "type": "geopandas_v2",
+          "name": "Overture_Maps_Example",
+          "entrypoint": "udf",
+          "parameters": {},
+          "metadata": {
+            "fused:defaultParameters": [
+              {
+                "parameter": "release",
+                "value": "",
+                "type": "string",
+                "suggestedValues": [
+                  "2024-08-20-0",
+                  "2024-09-18-0",
+                  "2024-10-23-0",
+                  "2024-11-13-0",
+                  "2024-12-18-0",
+                  "2025-01-22-0",
+                  "2025-03-19-1",
+                  "2025-04-23-0",
+                  "2025-05-21-0",
+                  "2025-06-25-0"
+                ]
+              },
+              {
+                "parameter": "theme",
+                "value": "",
+                "type": "string",
+                "suggestedValues": [
+                  "buildings",
+                  "base",
+                  "places",
+                  "transportation",
+                  "addresses",
+                  "divisions"
+                ]
+              },
+              {
+                "parameter": "overture_type",
+                "value": "",
+                "type": "string",
+                "suggestedValues": [
+                  "land_use",
+                  "water",
+                  "place",
+                  "connector",
+                  "segment",
+                  "building",
+                  "address",
+                  "infrastructure",
+                  "land",
+                  "division",
+                  "division_area",
+                  "division_boundary",
+                  "land_cover",
+                  "bathymetry"
+                ]
+              },
+              {
+                "parameter": "use_columns",
+                "value": [],
+                "type": "array",
+                "suggestedValues": [
+                  "geometry",
+                  "id",
+                  "names",
+                  "sources",
+                  "update_time",
+                  "categories"
+                ]
+              }
+            ],
+            "fused:vizConfig": {
+              "tileLayer": {
+                "@@type": "TileLayer",
+                "minZoom": 0,
+                "maxZoom": 19,
+                "tileSize": 256,
+                "pickable": true
+              },
+              "rasterLayer": {
+                "@@type": "BitmapLayer"
+              },
+              "vectorLayer": {
+                "@@type": "GeoJsonLayer",
+                "stroked": true,
+                "filled": false,
+                "pickable": true,
+                "lineWidthMinPixels": 1,
+                "getLineColor": {
+                  "@@function": "hasProp",
+                  "property": "r",
+                  "present": "@@=[properties.r, properties.g, properties.b]",
+                  "absent": [
+                    200,
+                    250,
+                    0
+                  ]
+                },
+                "getFillColor": [
+                  255,
+                  0,
+                  0,
+                  40
+                ]
+              }
+            },
+            "fused:udfType": "vector_tile",
+            "fused:slug": "Overture_Maps_Example",
+            "fused:name": "Overture_Maps_Example",
+            "fused:defaultViewState": {
+              "enable": true,
+              "latitude": 51.50786698991621,
+              "longitude": -0.10589130924052784,
+              "zoom": 13.935948485009598,
+              "pitch": 0,
+              "bearing": 0
+            }
+          },
+          "code": "fused.options.realtime_client_id = \"_local\"\n\n@fused.udf\ndef udf(\n    bounds: fused.types.Bounds = [-0.113, 51.503, -0.099, 51.513],\n    release: str = \"2025-06-25-0\",\n    theme: str = None,\n    overture_type: str = None,\n    use_columns: list = None,\n\n):\n    fused.options.realtime_client_id = \"_local\"\n\n    gdf = get_overture(\n        bounds=bounds,\n        release=release,\n        theme=theme,\n        overture_type=overture_type,\n        use_columns=use_columns,\n    )\n    return gdf\n\n\n\ndef get_overture(\n    bounds: fused.types.Bounds = None,\n    release: str = \"2025-06-25-0\",\n    theme: str = None,\n    overture_type: str = None,\n    use_columns: list = None,\n    num_parts: int = None,\n    min_zoom: int = None,\n    clip: bool = None,\n    point_convert: str = None,\n):\n    \"\"\"Returns Overture data as a GeoDataFrame.\"\"\"\n    import logging\n    import concurrent.futures\n    import json\n\n    import geopandas as gpd\n    import pandas as pd\n    from shapely.geometry import shape, box\n\n    common = fused.load(\"https://github.com/fusedio/udfs/tree/b672adc/public/common/\")\n\n    if release == \"2024-02-15-alpha-0\":\n        if overture_type == \"administrative_boundary\":\n            overture_type = \"administrativeBoundary\"\n        elif overture_type == \"land_use\":\n            overture_type = \"landUse\"\n        theme_per_type = {\n            \"building\": \"buildings\",\n            \"administrativeBoundary\": \"admins\",\n            \"place\": \"places\",\n            \"landUse\": \"base\",\n            \"water\": \"base\",\n            \"segment\": \"transportation\",\n            \"connector\": \"transportation\",\n        }\n    elif release == \"2024-03-12-alpha-0\":\n        theme_per_type = {\n            \"building\": \"buildings\",\n            \"administrative_boundary\": \"admins\",\n            \"place\": \"places\",\n            \"land_use\": \"base\",\n            \"water\": \"base\",\n            \"segment\": \"transportation\",\n            \"connector\": \"transportation\",\n        }\n    else:\n        theme_per_type = {\n            \"address\": \"addresses\",\n            \"building\": \"buildings\",\n            \"infrastructure\": \"base\",\n            \"land\": \"base\",\n            \"land_use\": \"base\",\n            \"land_cover\": \"base\",\n            \"water\": \"base\",\n            \"bathymetry\": \"base\",\n            \"place\": \"places\",\n            \"division\": \"divisions\",\n            \"division_area\": \"divisions\",\n            \"division_boundary\": \"divisions\",\n            \"segment\": \"transportation\",\n            \"connector\": \"transportation\",\n        }\n\n    if theme is None:\n        theme = theme_per_type.get(overture_type, \"buildings\")\n\n    if overture_type is None:\n        type_per_theme = {v: k for k, v in theme_per_type.items()}\n        overture_type = type_per_theme[theme]\n\n    if num_parts is None:\n        if overture_type == \"building\":\n            if release >= \"2025-01-22-0\":\n                num_parts = 6\n            else:\n                num_parts = 5\n        else:\n            num_parts = 1\n\n    if min_zoom is None:\n        if theme == \"admins\" or theme == \"divisions\":\n            min_zoom = 7\n        elif theme == \"base\":\n            min_zoom = 9\n        else:\n            min_zoom = 12\n\n    table_path = f\"s3://us-west-2.opendata.source.coop/fused/overture/{release}/theme={theme}/type={overture_type}\"\n    table_path = table_path.rstrip(\"/\")\n\n    def get_part(part):\n        part_path = f\"{table_path}/part={part}/\" if num_parts != 1 else table_path\n        try:\n            return common.table_to_tile(bounds, table=part_path, use_columns=use_columns, min_zoom=min_zoom)\n        except ValueError:\n            return None\n\n    if num_parts > 1:\n        with concurrent.futures.ThreadPoolExecutor(max_workers=num_parts) as pool:\n            dfs = list(pool.map(get_part, range(num_parts)))\n    else:\n        # Don't bother creating a thread pool to do one thing\n        dfs = [get_part(0)]\n\n    dfs = [df for df in dfs if df is not None]\n\n    if len(dfs):\n        gdf = pd.concat(dfs)\n\n    else:\n        print(\"Failed to get any data\")\n        return None\n\n    if point_convert is not None:\n        gdf[\"geometry\"] = gdf.geometry.centroid\n\n    if clip:\n        gdf = gdf.clip(bounds)\n\n    return gdf\n",
+          "headers": []
+        }
+      }
+    ],
+    "metadata": null
+  }
+}
