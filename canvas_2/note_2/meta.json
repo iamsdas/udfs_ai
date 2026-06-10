@@ -12,13 +12,13 @@
           "entrypoint": "udf",
           "parameters": {},
           "metadata": {
+            "nodeTemplateScaleFactor": 1,
+            "nodeTemplateGradient": true,
+            "nodeTemplateColor": "#FEF445",
+            "nodeTemplateAlignment": "left",
             "fused:udfType": "auto",
             "nodeTemplateType": "textbox",
             "isNodeTemplate": true,
-            "nodeTemplateColor": "#FEF445",
-            "nodeTemplateGradient": true,
-            "nodeTemplateScaleFactor": 1,
-            "nodeTemplateAlignment": "left",
             "fused:title": "note_1"
           },
           "headers": [],
