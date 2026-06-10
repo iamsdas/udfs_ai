@@ -57,8 +57,8 @@ width = 350
 height = 250
 title = "note_1"
 visible = true
-textBoxColor = "#FFA767"
-textBoxGradient = true
+textBoxColor = "#A5DD6B"
+textBoxGradient = false
 textBoxScaleFactor = 1
 textBoxAlignment = "left"
 
@@ -76,13 +76,27 @@ textBoxGradient = true
 textBoxScaleFactor = 1
 textBoxAlignment = "left"
 
+[[canvas.nodes]]
+udfName = "note_3"
+x = -1239.624210150983
+y = 456.0087719298243
+zIndex = 105
+width = 350
+height = 250
+title = "note_3"
+visible = true
+textBoxColor = "#DCC4EB"
+textBoxGradient = true
+textBoxScaleFactor = 1
+textBoxAlignment = "left"
+
 [canvas.viewport]
-x = 603.5217068281037
-y = 510.83535322547795
-zoom = 0.30884663147533975
+x = 917.7247373489355
+y = 396.29245844635057
+zoom = 0.42806159488361206
 
 [canvas.viewportBounds]
-minX = -1954.114584138803
-minY = -1654.0097937453666
-maxX = 1280.5005878896036
-maxY = 2522.820608573597
+minX = -2143.9081391977256
+minY = -925.7837264146544
+maxX = 13.4916626954931
+maxY = 2087.801270274303
