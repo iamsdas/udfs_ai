@@ -8,21 +8,21 @@
         "type": "udf",
         "udf": {
           "type": "geopandas_v2",
-          "name": "Widget_2",
+          "name": "note_2",
           "entrypoint": "udf",
           "parameters": {},
           "metadata": {
-            "stickyNoteVersion": 3,
-            "nodeTemplateGradient": true,
-            "nodeTemplateColor": "#FFF9C4",
             "fused:udfType": "auto",
-            "nodeTemplateType": "json_ui",
+            "nodeTemplateType": "textbox",
             "isNodeTemplate": true,
-            "fused:description": "Exported from Fused UDF Workbench",
-            "fused:title": "Widget_2"
+            "nodeTemplateColor": "#FEF445",
+            "nodeTemplateGradient": true,
+            "nodeTemplateScaleFactor": 1,
+            "nodeTemplateAlignment": "left",
+            "fused:title": "note_1"
           },
           "headers": [],
-          "source": "Widget_2.py"
+          "source": "note_2.py"
         }
       }
     ],
