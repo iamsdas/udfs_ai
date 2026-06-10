@@ -37,6 +37,7 @@ width = 700
 height = 500
 title = "widget_1"
 visible = true
+widgetBackgroundColor = "#DCC4EB"
 
 [[canvas.nodes]]
 udfName = "html_1"
@@ -91,12 +92,12 @@ textBoxScaleFactor = 1
 textBoxAlignment = "left"
 
 [canvas.viewport]
-x = 598.1010247697967
-y = 385.29423329240586
+x = 597.1010247697967
+y = 380.29423329240586
 zoom = 0.44699112862785145
 
 [canvas.viewportBounds]
-minX = -1338.0601682315576
-minY = -861.9728862967834
-maxX = 865.5629842540371
-maxY = 2023.9904301564322
+minX = -1335.82298736609
+minY = -850.7869819694453
+maxX = 867.8001651195048
+maxY = 2035.1763344837702
