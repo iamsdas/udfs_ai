@@ -12,8 +12,8 @@
           "entrypoint": "udf",
           "parameters": {},
           "metadata": {
-            "stickyNoteVersion": 3,
             "nodeTemplateScaleFactor": 1,
+            "stickyNoteVersion": 3,
             "nodeTemplateGradient": false,
             "nodeTemplateColor": "#A5DD6B",
             "nodeTemplateAlignment": "left",
