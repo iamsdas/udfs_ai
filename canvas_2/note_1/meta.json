@@ -12,14 +12,14 @@
           "entrypoint": "udf",
           "parameters": {},
           "metadata": {
+            "nodeTemplateScaleFactor": 1,
             "stickyNoteVersion": 3,
-            "nodeTemplateColor": "#A5DD6B",
             "nodeTemplateGradient": false,
+            "nodeTemplateAlignment": "left",
+            "nodeTemplateColor": "#A5DD6B",
             "fused:udfType": "auto",
             "nodeTemplateType": "textbox",
             "isNodeTemplate": true,
-            "nodeTemplateScaleFactor": 1,
-            "nodeTemplateAlignment": "left",
             "fused:description": "Exported from Fused UDF Workbench",
             "fused:title": "note_1"
           },
