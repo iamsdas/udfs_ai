@@ -12,58 +12,19 @@
           "entrypoint": "udf",
           "parameters": {},
           "metadata": {
-            "isNodeTemplate": true,
-            "nodeTemplateType": "textbox",
-            "nodeTemplateColor": "#FFF9C4",
-            "nodeTemplateGradient": true,
             "stickyNoteVersion": 3,
-            "fused:vizConfig": {
-              "tileLayer": {
-                "@@type": "TileLayer",
-                "minZoom": 0,
-                "maxZoom": 19,
-                "tileSize": 256
-              },
-              "rasterLayer": {
-                "@@type": "BitmapLayer",
-                "pickable": true
-              },
-              "vectorLayer": {
-                "@@type": "GeoJsonLayer",
-                "stroked": true,
-                "filled": false,
-                "pickable": true,
-                "lineWidthMinPixels": 1,
-                "pointRadiusMinPixels": 1,
-                "getLineColor": {
-                  "@@function": "colorContinuous",
-                  "attr": "value",
-                  "domain": [
-                    0,
-                    10
-                  ],
-                  "steps": 20,
-                  "colors": "Teal",
-                  "nullColor": [
-                    184,
-                    184,
-                    184
-                  ]
-                },
-                "getFillColor": [
-                  208,
-                  208,
-                  208,
-                  40
-                ]
-              }
-            },
+            "nodeTemplateColor": "#A5DD6B",
+            "nodeTemplateGradient": false,
             "fused:udfType": "auto",
-            "fused:slug": "note_1",
-            "fused:name": "note_1"
+            "nodeTemplateType": "textbox",
+            "isNodeTemplate": true,
+            "nodeTemplateScaleFactor": 1,
+            "nodeTemplateAlignment": "left",
+            "fused:description": "Exported from Fused UDF Workbench",
+            "fused:title": "note_1"
           },
-          "source": "note_1.py",
-          "headers": []
+          "headers": [],
+          "source": "note_1.py"
         }
       }
     ],
