@@ -12,58 +12,17 @@
           "entrypoint": "udf",
           "parameters": {},
           "metadata": {
-            "isNodeTemplate": true,
-            "nodeTemplateType": "json_ui",
+            "stickyNoteVersion": 3,
             "nodeTemplateColor": "#FFF9C4",
             "nodeTemplateGradient": true,
-            "stickyNoteVersion": 3,
-            "fused:vizConfig": {
-              "tileLayer": {
-                "@@type": "TileLayer",
-                "minZoom": 0,
-                "maxZoom": 19,
-                "tileSize": 256
-              },
-              "rasterLayer": {
-                "@@type": "BitmapLayer",
-                "pickable": true
-              },
-              "vectorLayer": {
-                "@@type": "GeoJsonLayer",
-                "stroked": true,
-                "filled": false,
-                "pickable": true,
-                "lineWidthMinPixels": 1,
-                "pointRadiusMinPixels": 1,
-                "getLineColor": {
-                  "@@function": "colorContinuous",
-                  "attr": "value",
-                  "domain": [
-                    0,
-                    10
-                  ],
-                  "steps": 20,
-                  "colors": "PurpOr",
-                  "nullColor": [
-                    184,
-                    184,
-                    184
-                  ]
-                },
-                "getFillColor": [
-                  208,
-                  208,
-                  208,
-                  40
-                ]
-              }
-            },
             "fused:udfType": "auto",
-            "fused:slug": "Widget_2",
-            "fused:name": "Widget_2"
+            "nodeTemplateType": "json_ui",
+            "isNodeTemplate": true,
+            "fused:description": "Exported from Fused UDF Workbench",
+            "fused:title": "Widget_2"
           },
-          "source": "Widget_2.py",
-          "headers": []
+          "headers": [],
+          "source": "Widget_2.py"
         }
       }
     ],
